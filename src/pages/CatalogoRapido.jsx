@@ -238,11 +238,11 @@ export default function CatalogoRapido() {
               <div key={producto.id || producto.slug} className="flex justify-between items-center py-4 border-b border-white/10 group hover:bg-white/5 transition-colors px-2 -mx-2 rounded-lg">
                 
                 <div className="flex flex-col pr-4">
-                  <span className="text-sm md:text-base font-bold uppercase tracking-wide text-[#ED6B48] leading-tight mb-0.5">
+                  <span className="text-sm md:text-base font-bold uppercase tracking-wide  text-[#F5F5DC] leading-tight mb-0.5">
                     {producto.nombre}
                   </span>
                   <div className="flex flex-row gap-2 items-center">
-                    <span className="text-xs md:text-sm font-semibold text-[#F5F5DC] uppercase tracking-widest mb-0.5">
+                    <span className="text-xs md:text-sm font-semibold text-[#ED6B48]  uppercase tracking-widest mb-0.5">
                       {producto.bodega}
                     </span>
                     {/* Origen en gris (antiguo color de la bodega). Opcionalmente se añade varietal si lo deseas */}
@@ -272,13 +272,13 @@ export default function CatalogoRapido() {
                           ${producto.precioBase?.toLocaleString()}
                         </span>
                       </div>
-                      <span className="text-base md:text-xl font-semibold text-[#ED6B48] tracking-tighter">
+                      <span className="text-base md:text-xl font-semibold text-[#F5F5DC] tracking-tighter">
                         ${producto.precioFinal?.toLocaleString()}
                       </span>
                     </>
                   ) : (
                     /* Precio normal en Brand Orange */
-                    <span className="text-base md:text-xl font-semibold text-[#ED6B48] tracking-tighter">
+                    <span className="text-base md:text-xl font-semibold text-[#F5F5DC] tracking-tighter">
                       ${producto.precioFinal?.toLocaleString() || producto.precioBase?.toLocaleString()}
                     </span>
                   )}
